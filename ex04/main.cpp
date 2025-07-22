@@ -6,7 +6,7 @@
 /*   By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 16:52:56 by jwolfram          #+#    #+#             */
-/*   Updated: 2025/07/22 20:27:09 by jwolfram         ###   ########.fr       */
+/*   Updated: 2025/07/22 23:33:22 by jwolfram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ std::string	getNewLine(std::string line, std::string s1, std::string s2)
 {
 	int				index;
 
-	while (line.find(s1))
+	while (line.find(s1) != std::string::npos)
 	{
 		index = line.find(s1);
 		line.erase(index, s1.length());
@@ -41,8 +41,10 @@ int	main(int argc, char **argv)
 	while (std::getline(file, line))
 	{
 		std::cout << line << std::endl;
-		fileReplace << getNewLine(line, argv[2], argv[3]);
-		std::cout << line << std::endl;
+		if (!file.eof())
+			fileReplace << getNewLine(line + "\n", argv[2], argv[3]);
+		else
+			fileReplace << getNewLine(line, argv[2], argv[3]);
 	}
 	file.close();
 	fileReplace.close();
