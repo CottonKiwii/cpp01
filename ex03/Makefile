@@ -6,11 +6,11 @@
 #    By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 15:40:11 by jwolfram          #+#    #+#              #
-#    Updated: 2025/07/22 14:55:20 by jwolfram         ###   ########.fr        #
+#    Updated: 2025/07/22 15:34:33 by jwolfram         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brainzzzz
+NAME = unnecessary_violence
 
 CXX = c++
 
@@ -24,9 +24,9 @@ SRCS_DIR = src
 OBJS_DIR = obj
 
 SRCS = main.cpp \
-	   Zombie.cpp \
-	   newZombie.cpp \
-	   randomChump.cpp
+	   Weapon.cpp \
+	   HumanA.cpp \
+	   HumanB.cpp
 
 OBJS = ${SRCS:%.cpp=${OBJS_DIR}/%.o}
 DEPS = ${SRCS:%.cpp=${OBJS_DIR}/%.d}

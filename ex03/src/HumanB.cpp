@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 13:08:47 by jwolfram          #+#    #+#             */
-/*   Updated: 2025/07/22 15:31:48 by jwolfram         ###   ########.fr       */
+/*   Created: 2025/07/22 15:42:48 by jwolfram          #+#    #+#             */
+/*   Updated: 2025/07/22 16:48:39 by jwolfram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "HumanB.hpp"
 
-#include <iostream>
-# include <string>
+HumanB::HumanB()
+{}
 
-class Zombie
+HumanB::HumanB(std::string new_name)
 {
-	private:
-		std::string	name;
+	name = new_name;
+}
 
-	public:
-		Zombie();
-		~Zombie();
-		Zombie(std::string new_name);
+HumanB::~HumanB()
+{}
 
-		void		announce();
-};
+void	HumanB::setWeapon(Weapon &new_weapon)
+{
+	weapon = &new_weapon;
+}
 
-	Zombie			*newZombie(std::string name);
-	void			randomChump(std::string name);
-
-#endif
+void	HumanB::attack()
+{
+	std::cout << name;
+	std::cout << " attacks with their ";
+	std::cout << weapon->getType() << std::endl;
+}

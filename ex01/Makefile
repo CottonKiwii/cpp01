@@ -6,7 +6,7 @@
 #    By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 15:40:11 by jwolfram          #+#    #+#              #
-#    Updated: 2025/07/21 14:22:18 by jwolfram         ###   ########.fr        #
+#    Updated: 2025/07/22 14:56:01 by jwolfram         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ ${OBJS_DIRS}:
 -include ${DEPS}
 
 clean:
-		${RM} ${OBJS_DIR}
+		${RM} ${OBJS_DIR} .cache compile_commands.json
 
 fclean: clean
 		${RM} ${NAME}

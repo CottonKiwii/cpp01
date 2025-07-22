@@ -6,48 +6,29 @@
 #    By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 15:40:11 by jwolfram          #+#    #+#              #
-#    Updated: 2025/07/22 14:55:20 by jwolfram         ###   ########.fr        #
+#    Updated: 2025/07/22 20:29:48 by jwolfram         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brainzzzz
+NAME = sed_is_for_losers
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -fr
 
-INCLUDE = -I./include
+SRCS = main.cpp
 
-SRCS_DIR = src
-OBJS_DIR = obj
-
-SRCS = main.cpp \
-	   Zombie.cpp \
-	   newZombie.cpp \
-	   randomChump.cpp
-
-OBJS = ${SRCS:%.cpp=${OBJS_DIR}/%.o}
-DEPS = ${SRCS:%.cpp=${OBJS_DIR}/%.d}
-
-OBJS_DIRS = ${sort ${dir ${OBJS}}}
+OBJS = ${SRCS:%.cpp=%.o}
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
 		${CXX} ${CXXFLAGS} ${INCLUDE} ${OBJS} -o ${NAME}
 
-${OBJS_DIR}/%.o: ${SRCS_DIR}/%.cpp | ${OBJS_DIRS}
-		bear --append -- ${CXX} ${CXXFLAGS} ${INCLUDE} -c $< -o $@
-		
-${OBJS_DIRS}:
-		mkdir -p $@
-
--include ${DEPS}
-
 clean:
-		${RM} ${OBJS_DIR} .cache compile_commands.json
+		${RM} ${OBJS}
 
 fclean: clean
 		${RM} ${NAME}
