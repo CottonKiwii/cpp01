@@ -6,7 +6,7 @@
 #    By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 15:40:11 by jwolfram          #+#    #+#              #
-#    Updated: 2025/07/22 14:56:01 by jwolfram         ###   ########.fr        #
+#    Updated: 2025/07/31 22:24:41 by jwolfram         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ ${NAME}: ${OBJS}
 		${CXX} ${CXXFLAGS} ${INCLUDE} ${OBJS} -o ${NAME}
 
 ${OBJS_DIR}/%.o: ${SRCS_DIR}/%.cpp | ${OBJS_DIRS}
-		bear --append -- ${CXX} ${CXXFLAGS} ${INCLUDE} -c $< -o $@
+		${CXX} ${CXXFLAGS} ${INCLUDE} -c $< -o $@
 		
 ${OBJS_DIRS}:
 		mkdir -p $@
@@ -46,7 +46,7 @@ ${OBJS_DIRS}:
 -include ${DEPS}
 
 clean:
-		${RM} ${OBJS_DIR} .cache compile_commands.json
+		${RM} ${OBJS_DIR}
 
 fclean: clean
 		${RM} ${NAME}

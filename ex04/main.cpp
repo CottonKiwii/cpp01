@@ -6,7 +6,7 @@
 /*   By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 16:52:56 by jwolfram          #+#    #+#             */
-/*   Updated: 2025/07/22 23:33:22 by jwolfram         ###   ########.fr       */
+/*   Updated: 2025/07/31 22:37:08 by jwolfram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ int	main(int argc, char **argv)
 	std::string		line;
 	while (std::getline(file, line))
 	{
-		std::cout << line << std::endl;
 		if (!file.eof())
 			fileReplace << getNewLine(line + "\n", argv[2], argv[3]);
 		else

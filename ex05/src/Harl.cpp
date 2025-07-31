@@ -6,7 +6,7 @@
 /*   By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:12:08 by jwolfram          #+#    #+#             */
-/*   Updated: 2025/07/24 16:36:39 by jwolfram         ###   ########.fr       */
+/*   Updated: 2025/07/31 22:39:39 by jwolfram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	Harl::complain(std::string level)
 		lvl++;
 	if (lvl == 4)
 	{
-		std::cout << "No Complains Found" << std::endl;
+		std::cout << "No Complaints Found" << std::endl;
 		return ;
 	}
 	(this->*func_arr[lvl])();

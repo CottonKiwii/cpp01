@@ -6,7 +6,7 @@
 #    By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 15:40:11 by jwolfram          #+#    #+#              #
-#    Updated: 2025/07/22 20:29:48 by jwolfram         ###   ########.fr        #
+#    Updated: 2025/07/31 22:34:38 by jwolfram         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OBJS = ${SRCS:%.cpp=%.o}
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-		${CXX} ${CXXFLAGS} ${INCLUDE} ${OBJS} -o ${NAME}
+		${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 
 clean:
 		${RM} ${OBJS}
