@@ -6,7 +6,7 @@
 /*   By: jwolfram <jwolfram@student.42vienna.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 13:16:25 by jwolfram          #+#    #+#             */
-/*   Updated: 2025/07/21 13:50:48 by jwolfram         ###   ########.fr       */
+/*   Updated: 2025/08/01 01:00:42 by jwolfram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ Zombie::Zombie(std::string new_name)
 }
 
 Zombie::~Zombie()
-{}
+{
+	std::cout << Zombie::name << " decided to go to sleep..." << std::endl;
+}
 
 void	Zombie::announce()
 {
