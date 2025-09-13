@@ -17,18 +17,18 @@ int	main()
 	Zombie *horde;
 
 	horde = zombieHorde(4, "Makoto");
-	std::cout << "*==========* ANNOUNCE *==========*" << std::endl;
+	std::cout << "*===========* ANNOUNCE *===========*" << std::endl;
 	for (int i = 0; i < 4; i++)
 		horde[i].announce();
-	std::cout << "*==========* DELETION *==========*" << std::endl;
+	std::cout << "*==========* DESTRUCTOR *==========*" << std::endl;
 	delete [] horde;		
 
 	std::cout << "\n";
 
 	horde = zombieHorde(2, "Kotone");
-	std::cout << "*==========* ANNOUNCE *==========*" << std::endl;
+	std::cout << "*===========* ANNOUNCE *============*" << std::endl;
 	for (int i = 0; i < 2; i++)
 		horde[i].announce();
-	std::cout << "*==========* DELETION *==========*" << std::endl;
+	std::cout << "*==========* DESTRUCTOR *===========*" << std::endl;
 	delete [] horde;		
 }
