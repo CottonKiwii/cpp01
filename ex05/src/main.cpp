@@ -16,11 +16,11 @@ int	main()
 {
 	Harl harl;
 
-	std::cout << "*==========*  DEBUG  *==========*" << std::endl;
+	std::cout << "*===========* DEBUG *===========*" << std::endl;
 	harl.complain("DEBUG");
 	std::cout << "\n";
 
-	std::cout << "*==========*  INFO   *==========*" << std::endl;
+	std::cout << "*===========* INFO *============*" << std::endl;
 	harl.complain("INFO");
 	std::cout << "\n";
 
@@ -28,7 +28,7 @@ int	main()
 	harl.complain("WARNING");
 	std::cout << "\n";
 
-	std::cout << "*==========*  ERROR  *==========*" << std::endl;
+	std::cout << "*===========* ERROR *===========*" << std::endl;
 	harl.complain("ERROR");
 	std::cout << "\n";
 
