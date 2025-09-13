@@ -17,11 +17,11 @@ int	main()
 	Zombie zombie;
 	Zombie *maya;
 	
-	std::cout << "*==========*   ANNOUNCE   *==========*" << std::endl;
+	std::cout << "*============* ANNOUNCE *============*" << std::endl;
 	zombie.announce();
 	std::cout << "\n";
 
-	std::cout << "*==========*  NEW ZOMBIE  *==========*" << std::endl;
+	std::cout << "*===========* NEW ZOMBIE *===========*" << std::endl;
 	maya = newZombie("Maya");
 	maya->announce();
 	delete maya;
